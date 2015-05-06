@@ -5,8 +5,8 @@ var conversions = require('./conversion');
 
 app.set('port', (process.env.PORT || 5000));
 
-app.get('/', function(request, response){
-    response.send("Yup");
+app.get('/',function(request, response){
+    response.send(conversions.accountBalance() + conversions.randomMoney());
 });
 
 app.listen(app.get('port'), function(){

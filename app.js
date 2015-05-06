@@ -3,10 +3,10 @@ var app = express();
 
 var conversions = require('./conversion');
 
-app.set('port', (process.env.PORT || 5000));
+app.set('port', 5000);
 
 app.get('/',function(request, response){
-    //response.sendStatus(conversions.accountBalance() + conversions.randomMoney());
+    response.sendStatus(conversions.accountBalance() + conversions.randomMoney());
 });
 
 app.listen(app.get('port'), function(){
